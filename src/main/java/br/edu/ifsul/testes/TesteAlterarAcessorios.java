@@ -23,7 +23,7 @@ public class TesteAlterarAcessorios {
     public static void main(String[] args) {
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("TrabalhoModelPU");
         EntityManager em = emf.createEntityManager();
-        Acessorios ace = em.find(Acessorios.class, 3);
+        Acessorios ace = em.find(Acessorios.class, 9);
         ace.setDescricao("banco");
         em.getTransaction().begin();
         em.merge(ace);
